@@ -1,0 +1,13 @@
+一、变量初始化的方式：
+1.int owls=101;
+2.int wrens(432);
+3.int emus{7};
+4.int rheas={12};
+5.int rocs{}默认为0；
+二、cout控制符
+cout<<dec;//十进制
+cout<<hex;//十六进制
+cout<<oct;//八进制
+三、在C++中,float只保证6位有效位。
+四、cout.self(ios_base::fixed,ios_base::floatfield);保证输出的浮点数采用定点表示法，以便更好地了解精度，它防止程序把较大的值切换为E表示法，并使程序显示到小数点后6位。
+五、auto让编译器能够根据初始值的类型推断变量的类型，auto n=100;

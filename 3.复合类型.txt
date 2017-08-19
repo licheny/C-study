@@ -1,0 +1,17 @@
+1.数组的初始化（C++11特性）
+double earnings[4] {1.2e4,1.6e4,1.1e4,1.7e4};//初始化数组时可省略等号（=）
+double earnings[4]={} or double earnings[4]{}//这将把所有元素都设置为0
+2.cin.getline(name,20)将读取一行到name数组中，这行包含的字符不超过19个，最后一个用来存放'\0'。
+这个函数在读取到指定数目的字符或遇到换行符时停止读取，并且不保存换行符。
+连续读取两行数据:cin.getline(name1,ArSize).getline(name2,ArSize);
+3.cin.get(name,ArSize)不会丢弃换行符，将其留在输入队列中
+cin.get(name,ArSize);
+cin.get(dessert,ArSize);
+将会出现问题，由于第一次调用后，换行符将留在输入队列中，因此第二次调用时看到的第一个字符便是换行符，因此get()认为已到达行尾，而没有发现任何可读取的内容。
+如果不借助帮助，get()将不能跨过该换行符。
+改进：cin.get(name,ArSize);
+      cin.get();
+      cin.get(dessert,ArSize);
+或者：cin.get(name,ArSize).get();
+4.对于结构体类型的初始化：
+C++11标准：inflatable duck {"Daphne",0.12,9.98};如果inflatable mayor{};各个成员都将被设置为0。

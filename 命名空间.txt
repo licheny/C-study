@@ -1,1 +1,0 @@
-using namespace std将导入所有的std中的函数，为了让函数使用特定的元素，可以使用using std::cout等。

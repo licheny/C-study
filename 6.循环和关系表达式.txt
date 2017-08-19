@@ -1,0 +1,1 @@
+1.通常cout在显示bool值之前将它们转换为int,但cout.setf(ios::boolalpha)函数调用设置了一个标记，该标记命令cout显示true和false，而不是1和0.
